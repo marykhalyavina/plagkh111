@@ -37,25 +37,14 @@ class plagiarism_plagkh_utils {
      * @return string Supported plagkh lang code
      */
     public static function get_lang() {
-        $defaultlangcode = 'en';
+        $defaultlangcode = 'ru';
         try {
             $langcode = str_replace("_utf8", "", current_language());
             $langarray = array(
-                'en' => $defaultlangcode,
-                'en_us' => $defaultlangcode,
+                'ru' => $defaultlangcode,
                 'fr' => 'fr',
                 'fr_ca' => 'fr',
-                'es' => 'es',
-                'fr' => 'fr',
-                'pt' => 'pt',
-                'hi' => 'hi',
-                'zh' => 'zh',
-                'it' => 'it',
-                'ja' => 'ja',
-                'de' => 'de',
-                'tr' => 'tr',
-                'ru' => 'ru',
-                'ar' => 'ar'
+                'en' => 'en'
             );
             return (isset($langarray[$langcode])) ? $langarray[$langcode] : $defaultlangcode;
         } catch (Exception $e) {
