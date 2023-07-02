@@ -104,7 +104,7 @@ class plagiarism_plagkh_comms {
 
             $result = plagiarism_plagkh_http_client::execute(
                 'POST',
-                $this->plagkh_api_url() . "/api/moodle/plugin/" . $this->key . "/task/submit-for-scan",
+                $this->plagkh_api_url() . "/checkText",
                 true,
                 $paramsmerge,
                 false,
@@ -143,7 +143,7 @@ class plagiarism_plagkh_comms {
      * @return object $result an array of resubmitted ids and new ids that rescanned
      */
     public function get_resubmit_reports_ids($cursor) {
-        if (isset($this->key) && isset($this->secret)) {
+        /*if (isset($this->key) && isset($this->secret)) {
             $reqbody = (array)[
                 'cursor' => $cursor
             ];
@@ -154,7 +154,8 @@ class plagiarism_plagkh_comms {
                 json_encode($reqbody)
             );
             return $result;
-        }
+        }*/
+        return null;
     }
 
     /**
@@ -162,7 +163,7 @@ class plagiarism_plagkh_comms {
      * @param array $ids plagkh report scan ids
      */
     public function delete_resubmitted_ids(array $ids) {
-        if (isset($this->key) && isset($this->secret)) {
+        /*if (isset($this->key) && isset($this->secret)) {
             $reqbody = (array)[
                 'ids' => $ids
             ];
@@ -172,7 +173,8 @@ class plagiarism_plagkh_comms {
                 true,
                 json_encode($reqbody)
             );
-        }
+        }*/
+        return null;
     }
 
     /**
@@ -186,7 +188,7 @@ class plagiarism_plagkh_comms {
             $isinstructor = -1;
         }
 
-        if (isset($this->key) && isset($this->secret)) {
+        /*if (isset($this->key) && isset($this->secret)) {
             $result = plagiarism_plagkh_http_client::execute_retry(
                 'POST',
                 $this->plagkh_api_url() . "/api/moodle/" . $this->key .
@@ -195,7 +197,8 @@ class plagiarism_plagkh_comms {
             );
 
             return $result->token;
-        }
+        }*/
+        return null;
     }
 
     /**
