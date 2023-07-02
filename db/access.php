@@ -21,7 +21,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-
+//права доступа
 $capabilities = array(
     'plagiarism/plagkh:enable' => array(
         'captype' => 'write',

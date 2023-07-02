@@ -33,9 +33,9 @@ class plagiarism_plagkh_pluginconfig {
         $config = self::admin_config();
 
         if (
-            empty($config->plagiarism_plagkh_key) ||
-            empty($config->plagiarism_plagkh_apiurl) ||
-            empty($config->plagiarism_plagkh_secret)
+            //empty($config->plagiarism_plagkh_key) ||
+            empty($config->plagiarism_plagkh_apiurl) //||
+            //empty($config->plagiarism_plagkh_secret)
         ) {
             // Plugin not configured.
             return false;

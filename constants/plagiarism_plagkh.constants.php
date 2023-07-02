@@ -40,17 +40,7 @@ define('PLAGIARISM_plagkh_LOGS_PREFIX', 'log_');
 // plagkh support file types.
 $plagkhacceptedfiles = array(
     // Textual.
-    '.html', '.txt', '.csv', '.rtf', '.xml', '.htm',
-    // Non-Textual.
-    '.pdf', '.docx', '.doc', '.pptx', '.ppt', '.odt',
-    '.chm', '.epub', '.odp', '.ppsx', '.pages', '.xlsx',
-    '.xls', '.LaTeX',
-    // Source code.
-    '.py', '.go', '.cs', '.c', '.h', '.idc', '.cpp', '.hpp',
-    '.cpp', '.hpp', '.cc', '.hh', '.java', '.js', '.swift',
-    '.rb', '.pl', '.php', '.sh', '.m', '.scala',
-    // OCR.
-    '.gif', '.png', '.bmp', '.jpg', '.jpeg'
+    '.html', '.txt', '.csv', '.rtf', '.xml', '.htm'
 );
 define('PLAGIARISM_plagkh_ACCEPTED_FILES', $plagkhacceptedfiles);
 define('DEFAULT_DATABASE_plagkhDB_ID', 'DEFAULT_DATABASE_plagkhDB_ID');

@@ -260,8 +260,8 @@ class plagiarism_plagkh_comms {
                 isset($config->plagiarism_plagkh_key) &&
                 isset($config->plagiarism_plagkh_apiurl)
             ) {
-                $secret = $config->plagiarism_plagkh_secret;
-                $key = $config->plagiarism_plagkh_key;
+                $secret = /*$config->plagiarism_plagkh_secret*/ 'default';
+                $key = /*$config->plagiarism_plagkh_key;*/ 'default';
                 $apiurl = $config->plagiarism_plagkh_apiurl;
 
                 if (!isset($secret) || !isset($key) || !isset($apiurl)) {
@@ -376,12 +376,13 @@ class plagiarism_plagkh_comms {
      * @return object all the user ids that was updated succesfully in plagkh server
      */
     public function upsert_synced_eula($data) {
-        $result = plagiarism_plagkh_http_client::execute(
+        /*$result = plagiarism_plagkh_http_client::execute(
             'POST',
             $this->plagkh_api_url() . "/api/moodle/plugin/$this->key/task/eula-approval-sync",
             true,
             json_encode($data)
         );
-        return $result;
+        return $result;*/
+        return null;
     }
 }

@@ -57,6 +57,7 @@ class plagiarism_plagkh_synceulausers extends \core\task\scheduled_task {
         $this->handle_synced_users();
     }
 
+    //////////////////////////////////////////
     /**
      * Handle and change the score of resubmitted files.
      */
