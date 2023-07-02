@@ -226,7 +226,7 @@ class plagiarism_plagkh_submissiondisplay {
                 }
 
                 if ($submittedfile) {
-                    $clpoweredbyplagkhtxt = get_string('clpoweredbyplagkh', 'plagiarism_plagkh');
+                    //$clpoweredbyplagkhtxt = get_string('clpoweredbyplagkh', 'plagiarism_plagkh');
                     switch ($submittedfile->statuscode) {
                         case 'success':
 
@@ -256,12 +256,12 @@ class plagiarism_plagkh_submissiondisplay {
                             $similaritywrapper .= get_string('clplagiarised', 'plagiarism_plagkh') . ':'
                                 . $similaritystring . '</a>';
 
-                            $divcontent = $OUTPUT->pix_icon(
+                            $divcontent = /*$OUTPUT->pix_icon(
                                 'plagkh-logo',
                                 $clpoweredbyplagkhtxt,
                                 'plagiarism_plagkh',
                                 array('class' => 'icon_size')
-                            ) . $similaritywrapper;
+                            ) .*/ $similaritywrapper;
 
                             $output = html_writer::tag(
                                 'div',
@@ -302,13 +302,13 @@ class plagiarism_plagkh_submissiondisplay {
 
                                 $output = html_writer::tag(
                                     'div',
-                                    $OUTPUT->pix_icon(
+                                    /*$OUTPUT->pix_icon(
                                         'plagkh-logo',
                                         $clpoweredbyplagkhtxt,
                                         'plagiarism_plagkh',
                                         array('class' => 'icon_size')
                                     )
-                                        . $errorwrapper
+                                        .*/ $errorwrapper
                                         . $OUTPUT->pix_icon(
                                             'plagkh-error',
                                             $submittedfile->errormsg,
@@ -330,13 +330,13 @@ class plagiarism_plagkh_submissiondisplay {
 
                             $output = html_writer::tag(
                                 'div',
-                                $OUTPUT->pix_icon(
+                                /*$OUTPUT->pix_icon(
                                     'plagkh-logo',
                                     $clpoweredbyplagkhtxt,
                                     'plagiarism_plagkh',
                                     array('class' => 'icon_size')
                                 )
-                                    . $pendingwrapper
+                                    .*/ $pendingwrapper
                                     . $OUTPUT->pix_icon(
                                         'plagkh-loading',
                                         get_string('clplagiarisescanning', 'plagiarism_plagkh'),
@@ -362,13 +362,13 @@ class plagiarism_plagkh_submissiondisplay {
 
                             $output = html_writer::tag(
                                 'div',
-                                $OUTPUT->pix_icon(
+                                /*$OUTPUT->pix_icon(
                                     'plagkh-logo',
                                     $clpoweredbyplagkhtxt,
                                     'plagiarism_plagkh',
                                     array('class' => 'icon_size')
                                 )
-                                    . $queuedwrapper
+                                    .*/ $queuedwrapper
                                     . $OUTPUT->pix_icon(
                                         'plagkh-scheduled',
                                         $queuedtxt,
