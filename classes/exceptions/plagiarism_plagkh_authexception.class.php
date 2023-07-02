@@ -26,6 +26,6 @@ class plagiarism_plagkh_auth_exception extends Exception {
      * constructor
      */
     public function __construct() {
-        parent::__construct("UnAuthorized, make sure you are using the right key & secret.");
+        parent::__construct("Не авторизован.");
     }
 }

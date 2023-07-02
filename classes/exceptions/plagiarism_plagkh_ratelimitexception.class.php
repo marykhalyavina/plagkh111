@@ -26,6 +26,6 @@ class plagiarism_plagkh_rate_limit_exception extends Exception {
      * constructor
      */
     public function __construct() {
-        parent::__construct("Too many requests. Please wait before trying again.", 429);
+        parent::__construct("Слишком много запросов. Попробуйте позднее.", 429);
     }
 }

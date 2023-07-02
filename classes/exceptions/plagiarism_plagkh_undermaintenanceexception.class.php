@@ -26,6 +26,6 @@ class plagiarism_plagkh_under_maintenance_exception extends Exception {
      * constructor
      */
     public function __construct() {
-        parent::__construct("plagkh plugin is under maintenance, to learn more please visit https://status.plagkh.com", 503);
+        parent::__construct("Плагин недоступен в данный момент.", 503);
     }
 }

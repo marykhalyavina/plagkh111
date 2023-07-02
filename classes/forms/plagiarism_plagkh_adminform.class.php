@@ -100,7 +100,7 @@ class plagiarism_plagkh_adminform extends moodleform {
             get_string('clapiurl', 'plagiarism_plagkh')
         );
         $mform->setType('plagiarism_plagkh_apiurl', PARAM_TEXT);
-        $mform->addElement(
+        /*$mform->addElement(
             'text',
             'plagiarism_plagkh_key',
             get_string('claccountkey', 'plagiarism_plagkh')
@@ -110,12 +110,12 @@ class plagiarism_plagkh_adminform extends moodleform {
             'passwordunmask',
             'plagiarism_plagkh_secret',
             get_string('claccountsecret', 'plagiarism_plagkh')
-        );
+        );*/
 
-        if (\plagiarism_plagkh_comms::test_plagkh_connection('admin_settings_page')) {
+        /*if (\plagiarism_plagkh_comms::test_plagkh_connection('admin_settings_page')) {
             $btn = plagiarism_plagkh_utils::get_plagkh_settings_button_link(null, true);
             $mform->addElement('html', $btn);
-        }
+        }*/
 
         $this->add_action_buttons();
     }
@@ -126,8 +126,8 @@ class plagiarism_plagkh_adminform extends moodleform {
      * @param mixed $files
      */
     public function validation($data, $files) {
-        $newconfigsecret = $data["plagiarism_plagkh_secret"];
-        $newconfigkey = $data["plagiarism_plagkh_key"];
+        $newconfigsecret = /*$data["plagiarism_plagkh_secret"]*/'default';
+        $newconfigkey = /*$data["plagiarism_plagkh_key"]*/ 'default';
         $newapiurl = $data["plagiarism_plagkh_apiurl"];
 
         $config = plagiarism_plagkh_pluginconfig::admin_config();

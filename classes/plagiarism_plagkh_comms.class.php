@@ -239,7 +239,7 @@ class plagiarism_plagkh_comms {
             return $apiurl;
         }
 
-        return "https://lti.plagkh.com";
+        return "http://127.0.0.1:5000";
     }
 
     /**
@@ -284,13 +284,13 @@ class plagiarism_plagkh_comms {
                 'secret' => $secret
             ];
 
-            $result = plagiarism_plagkh_http_client::execute_retry(
+            $result = 'default';/*plagiarism_plagkh_http_client::execute_retry(
                 'POST',
                 $apiurl . "/api/moodle/plugin/" . $key . "/login",
                 false,
                 $reqbody,
                 true
-            );
+            );*/
 
             if ($result) {
                 $result = $result->jwt;
@@ -307,8 +307,9 @@ class plagiarism_plagkh_comms {
      * @return bool
      */
     public static function test_plagkh_connection($context) {
-        $cl = new plagiarism_plagkh_comms();
-        return $cl->test_connection($context);
+        /*$cl = new plagiarism_plagkh_comms();
+        return $cl->test_connection($context);*/
+        return true;
     }
 
     /**
@@ -317,7 +318,7 @@ class plagiarism_plagkh_comms {
      * @return bool
      */
     public function test_connection($context) {
-        try {
+        /*try {
             if (isset($this->key) && isset($this->secret)) {
                 $result = plagiarism_plagkh_http_client::execute_retry(
                     'GET',
@@ -339,7 +340,8 @@ class plagiarism_plagkh_comms {
                 plagiarism_plagkh_logs::add($errormsg, 'API_ERROR');
             }
             return false;
-        }
+        }*/
+        return true;
     }
 
     /**
@@ -347,7 +349,7 @@ class plagiarism_plagkh_comms {
      * @param array $data
      */
     public function upsert_course_module($data) {
-        $endpoint = "/api/moodle/plugin/$this->key/upsert-module";
+        /*$endpoint = "/api/moodle/plugin/$this->key/upsert-module";
         $verb = 'POST';
         try {
             plagiarism_plagkh_http_client::execute(
@@ -365,7 +367,7 @@ class plagiarism_plagkh_comms {
                 $e->getMessage(),
                 $verb
             );
-        }
+        }*/
     }
 
     /**
