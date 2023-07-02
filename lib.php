@@ -222,8 +222,8 @@ class plagiarism_plugin_plagkh extends plagiarism_plugin {
 
             $settingslinkparams = $settingslinkparams . "cmid=$cmid&modulename=$modulename";
 
-            $btn = plagiarism_plagkh_utils::get_plagkh_settings_button_link($settingslinkparams, false, $cmid);
-            $mform->addElement('html', $btn);
+            /*$btn = plagiarism_plagkh_utils::get_plagkh_settings_button_link($settingslinkparams, false, $cmid);
+            $mform->addElement('html', $btn);*/
 
             $settingsdisplayed = true;
         }

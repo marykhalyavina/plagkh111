@@ -244,17 +244,17 @@ class plagiarism_plagkh_submissiondisplay {
                                 "$CFG->wwwroot/plagiarism/plagkh/plagiarism_plagkh_report.php" .
                                 "?cmid=$submittedfile->cm&userid=$submittedfile->userid" .
                                 "&identifier=$submittedfile->identifier&modulename=$coursemodule->modname";
-
+                                
                             $similaritystring = '&nbsp;<span class="' . $htmlclassrank . '">'
                                 . '<span></span>'
                                 . $results["score"] . '%</span>';
 
-                            $similaritywrapper = '<a class="plagkh-text-gray" title="'
+                            /*$similaritywrapper = '<a class="plagkh-text-gray" title="'
                                 . get_string('clopenreport', 'plagiarism_plagkh') . '" href="'
-                                . $results['reporturl'] . '" target="_blank">';
+                                . $results['reporturl'] . '" target="_blank">';*/
 
-                            $similaritywrapper .= get_string('clplagiarised', 'plagiarism_plagkh') . ':'
-                                . $similaritystring . '</a>';
+                            $similaritywrapper = /*get_string('clplagiarised', 'plagiarism_plagkh') . ':'
+                                .*/ $similaritystring /*. '</a>'*/;
 
                             $divcontent = /*$OUTPUT->pix_icon(
                                 'plagkh-logo',
@@ -269,7 +269,7 @@ class plagiarism_plagkh_submissiondisplay {
                                 array('class' => 'plagkh')
                             );
 
-                            if ($submittedfile->ischeatingdetected) {
+                            /*if ($submittedfile->ischeatingdetected) {
                                 $cheatingdetectioncontent = $OUTPUT->pix_icon(
                                     'plagkh-warn',
                                     get_string('clcheatingdetected', 'plagiarism_plagkh'),
@@ -286,7 +286,7 @@ class plagiarism_plagkh_submissiondisplay {
                                     $cheatingdetectioncontent,
                                     array('class' => 'plagkh')
                                 );
-                            }
+                            }*/
 
                             break;
                         case 'error':
