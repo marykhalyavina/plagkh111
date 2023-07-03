@@ -138,7 +138,7 @@ class plagiarism_plagkh_http_client {
     public static function execute_retry(
         $verb,
         $url,
-        $requireauth = true,
+        $requireauth = false,
         $data = null,
         $isauthretry = false,
         $contenttype = 'application/json'

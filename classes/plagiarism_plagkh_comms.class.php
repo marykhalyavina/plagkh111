@@ -102,11 +102,16 @@ class plagiarism_plagkh_comms {
                 $paramsmerge['file'] = '@' . $filepath;
             }
 
+            //$mimetype = mime_content_type($filepath);
+            $filedata = file_get_contents($filepath);
+            $params['text'] = base64_encode($filedata);
+
+
             $result = plagiarism_plagkh_http_client::execute(
                 'POST',
                 $this->plagkh_api_url() . "/checkText",
                 true,
-                $paramsmerge,
+                $params,
                 false,
                 "multipart/form-data"
             );
@@ -120,7 +125,7 @@ class plagiarism_plagkh_comms {
      * @return array a list of plagkh scan instances for files
      */
     public function get_plagiarism_scans_instances(array $submissionsinstances) {
-        if (isset($this->key) && isset($this->secret)) {
+        /*if (isset($this->key) && isset($this->secret)) {
 
             $params = (array)[
                 'instances' => $submissionsinstances,
@@ -134,7 +139,8 @@ class plagiarism_plagkh_comms {
             );
 
             return $result;
-        }
+        }*/
+        return null;
     }
 
     /**
