@@ -102,10 +102,10 @@ class plagiarism_plagkh_utils {
                     'url' => "$CFG->wwwroot/plagiarism/plagkh/settings.php",
                     'name' => 'plagkh Plugin',
                 ],
-                [
+                /*[
                     'url' => "$CFG->wwwroot/plagiarism/plagkh/plagiarism_plagkh_settings.php",
                     'name' => 'Integration Settings',
-                ],
+                ],*/
             ];
         }
         return $breadcrumbs;
@@ -126,7 +126,7 @@ class plagiarism_plagkh_utils {
             }
         }
 
-        $settingsurl = "$CFG->wwwroot/plagiarism/plagkh/plagiarism_plagkh_settings.php";
+        $settingsurl = "";//"$CFG->wwwroot/plagiarism/plagkh/plagiarism_plagkh_settings.php";
         if (!isset($settingsurlparams) || $settingsurlparams != "") {
             $settingsurl = $settingsurl . $settingsurlparams;
         }
